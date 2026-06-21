@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gričko Grill — Roštilj na živoj vatri | Zadar</title>
+<meta name="description" content="Gričko Grill, Zadar — roštilj na žaru i živoj vatri. Meso s ražnja, riba s gradela, ćevapi, ražnjići i peka. Dim, žar i obilna porcija u srcu Zadra." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#161310;
+  --bg-2:#1d1916;
+  --bg-3:#241e19;
+  --ember:#C0521F;
+  --ember-2:#E0651F;
+  --amber:#E2A04A;
+  --cream:#F3E9D8;
+  --smoke:#9a8d7c;
+  --line:rgba(243,233,216,.14);
+  --font-display:'Oswald',sans-serif;
+  --font-anton:'Anton',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:var(--font-body);
+  font-weight:300;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+section{position:relative;z-index:2}
+
+/* ----- Header ----- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 28px;
+  transition:background .4s ease,padding .4s ease,border-color .4s ease;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{background:rgba(18,15,12,.92);backdrop-filter:blur(10px);padding:14px 28px;border-bottom:1px solid var(--line)}
+.logo{font-family:var(--font-anton);font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:var(--cream)}
+.logo span{color:var(--ember-2)}
+nav.main{display:flex;gap:30px;align-items:center}
+nav.main a{font-family:var(--font-display);text-transform:uppercase;font-size:12px;letter-spacing:.18em;font-weight:400;color:var(--smoke);transition:color .3s}
+nav.main a:hover{color:var(--cream)}
+.btn-res{
+  font-family:var(--font-display);text-transform:uppercase;font-size:12px;letter-spacing:.16em;font-weight:600;
+  color:var(--cream);background:var(--ember);padding:12px 22px;border-radius:2px;
+  position:relative;transition:transform .3s,box-shadow .3s;
+  box-shadow:0 0 0 rgba(224,101,31,0);
+}
+.btn-res:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(224,101,31,.45),0 0 18px rgba(226,160,74,.35)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+.nav-toggle span{width:26px;height:2px;background:var(--cream);display:block}
+
+/* ----- Hero ----- */
+.hero{height:100vh;min-height:640px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(18,15,12,.96) 0%,rgba(18,15,12,.45) 45%,rgba(18,15,12,.55) 100%);}
+.hero-inner{position:relative;z-index:3;width:100%;padding-bottom:8vh}
+.hero-eyebrow{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.32em;font-size:13px;color:var(--amber);margin-bottom:18px}
+.hero h1{font-family:var(--font-anton);font-size:clamp(48px,9vw,128px);line-height:.94;text-transform:uppercase;letter-spacing:.005em;color:var(--cream);text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.hero h1 em{font-style:normal;color:var(--ember-2)}
+.hero-tag{max-width:560px;margin-top:24px;font-size:clamp(17px,2vw,21px);color:var(--cream);font-weight:300;line-height:1.55}
+.hero-cta{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero-cta .ghost{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.16em;font-size:12px;border:1px solid var(--line);padding:13px 22px;border-radius:2px;color:var(--cream);transition:border-color .3s,background .3s}
+.hero-cta .ghost:hover{border-color:var(--amber);background:rgba(226,160,74,.08)}
+.scroll-hint{position:absolute;bottom:26px;right:28px;z-index:3;font-family:var(--font-display);text-transform:uppercase;letter-spacing:.2em;font-size:10px;color:var(--smoke);writing-mode:vertical-rl}
+
+/* ----- Reveal base ----- */
+.reveal{opacity:0;transform:translateY(28px)}
+
+/* ----- Manifest ----- */
+.manifest{padding:130px 0 110px;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+.manifest .small{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.3em;font-size:12px;color:var(--ember-2);margin-bottom:30px}
+.word-h2{font-family:var(--font-display);font-weight:500;text-transform:uppercase;font-size:clamp(28px,4.3vw,52px);line-height:1.12;letter-spacing:.01em;max-width:980px;margin:0 auto}
+.word-h2 .w{display:inline-block;overflow:hidden;vertical-align:top}
+.word-h2 .w i{display:inline-block;font-style:normal}
+.word-h2 .em{color:var(--ember-2)}
+.manifest p{max-width:660px;margin:34px auto 0;color:var(--smoke);font-size:18px}
+
+/* ----- Section heading helper ----- */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:54px;flex-wrap:wrap}
+.sec-kicker{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.3em;font-size:12px;color:var(--ember-2);margin-bottom:14px}
+.sec-title{font-family:var(--font-anton);text-transform:uppercase;font-size:clamp(34px,5.5vw,68px);line-height:.98;letter-spacing:.01em}
+.sec-sub{color:var(--smoke);max-width:420px;font-size:16px}
+
+/* ----- Menu ----- */
+.menu{padding:110px 0;background:var(--bg-2)}
+.menu-cat{margin-bottom:66px}
+.menu-cat:last-child{margin-bottom:0}
+.menu-cat h3{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.16em;font-weight:600;font-size:15px;color:var(--amber);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:8px;display:flex;align-items:center;gap:14px}
+.menu-cat h3::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember-2)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 56px}
+.dish{padding:22px 0;border-bottom:1px solid rgba(243,233,216,.07)}
+.dish .dn{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.04em;font-weight:500;font-size:19px;color:var(--cream)}
+.dish .dd{color:var(--smoke);font-size:15px;margin-top:6px;max-width:90%}
+
+/* ----- Story ----- */
+.story{padding:120px 0;background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+.story-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.story-img{position:relative;border-radius:3px;overflow:hidden;aspect-ratio:4/5}
+.story-img img{width:100%;height:120%;object-fit:cover;filter:saturate(1.05) contrast(1.04)}
+.story-img::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 120px rgba(192,82,31,.25)}
+.story-text h2{font-family:var(--font-anton);text-transform:uppercase;font-size:clamp(30px,4.5vw,56px);line-height:1.0;margin-bottom:26px}
+.story-text p{color:var(--smoke);font-size:17px;margin-bottom:20px}
+.story-text p strong{color:var(--cream);font-weight:500}
+
+/* ----- Gallery ----- */
+.gallery{padding:110px 0;background:var(--bg)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+.gal-grid figure{overflow:hidden;border-radius:3px;position:relative}
+.gal-grid img{width:100%;height:100%;object-fit:cover;filter:sepia(.18) contrast(1.06) saturate(.95);transition:transform .8s ease,filter .8s ease}
+.gal-grid figure:hover img{transform:scale(1.06);filter:sepia(.05) contrast(1.1) saturate(1.05)}
+.gal-grid figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal-grid figure:nth-child(4){grid-row:span 2}
+.gal-grid figure:nth-child(6){grid-column:span 2}
+
+/* ----- Visit / location ----- */
+.visit{padding:120px 0;background:var(--bg-3)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:stretch}
+.visit-info h2{font-family:var(--font-anton);text-transform:uppercase;font-size:clamp(30px,4.5vw,54px);line-height:1;margin-bottom:30px}
+.info-block{margin-bottom:30px}
+.info-block .lbl{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--ember-2);margin-bottom:10px}
+.info-block .val{font-size:18px;color:var(--cream)}
+.info-block .val a:hover{color:var(--amber)}
+.hours-row{display:flex;justify-content:space-between;max-width:340px;padding:8px 0;border-bottom:1px solid rgba(243,233,216,.07);color:var(--smoke);font-size:15px}
+.hours-row span:last-child{color:var(--cream)}
+.map-wrap{border-radius:3px;overflow:hidden;min-height:380px;border:1px solid var(--line)}
+.map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.3) contrast(1.05)}
+.visit .btn-res{display:inline-block;margin-top:14px}
+
+/* ----- Footer ----- */
+footer{background:var(--bg);padding:80px 0 40px;border-top:1px solid var(--line)}
+.foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+.foot-logo{font-family:var(--font-anton);font-size:34px;text-transform:uppercase;letter-spacing:.03em}
+.foot-logo span{color:var(--ember-2)}
+.foot-col p{color:var(--smoke);font-size:15px;margin-top:14px;max-width:300px}
+.foot-col .lbl{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--ember-2);margin-bottom:12px}
+.foot-col a{color:var(--cream);font-size:16px;display:block;margin-bottom:8px}
+.foot-col a:hover{color:var(--amber)}
+.foot-bottom{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--smoke);font-size:13px}
+
+/* ----- Mobile ----- */
+@media(max-width:880px){
+  nav.main{position:fixed;inset:0;background:rgba(18,15,12,.98);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .45s ease;z-index:90}
+  nav.main.open{transform:translateX(0)}
+  nav.main a{font-size:20px}
+  .nav-toggle{display:flex;z-index:95}
+  header .btn-res{display:none}
+  .story-grid,.visit-grid{grid-template-columns:1fr;gap:40px}
+  .menu-grid{grid-template-columns:1fr;gap:0}
+  .gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .gal-grid figure:nth-child(1){grid-column:span 2;grid-row:span 1}
+  .gal-grid figure:nth-child(4){grid-row:span 1}
+  .gal-grid figure:nth-child(6){grid-column:span 2}
+  .scroll-hint{display:none}
+}
+.mobile-cta{display:none}
+@media(max-width:880px){
+  .mobile-cta{display:block;position:fixed;bottom:0;left:0;right:0;z-index:80;padding:12px 16px;background:rgba(18,15,12,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .mobile-cta a{display:block;text-align:center;background:var(--ember);color:var(--cream);font-family:var(--font-display);text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;padding:14px;border-radius:2px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hero-bg img{transform:none!important}
+}
+</style>
+</head>
+<body>
+<header id="header">
+  <a href="#top" class="logo">GRIČKO<span>·</span>GRILL</a>
+  <nav class="main" id="nav">
+    <a href="#manifest">Filozofija</a>
+    <a href="#menu">Jelovnik</a>
+    <a href="#story">Priča</a>
+    <a href="#gallery">Galerija</a>
+    <a href="#visit">Kontakt</a>
+  </nav>
+  <a href="#visit" class="btn-res">Rezerviraj stol</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Izbornik"><span></span><span></span><span></span></button>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=2000&q=80" alt="Meso na žaru iznad živog ugljena" /></div>
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow reveal">Zadar · Roštilj na živoj vatri</div>
+    <h1 class="reveal">Žar, dim<br>i <em>vatra</em>.</h1>
+    <p class="hero-tag reveal">S ražnja, s gradela, iznad žive vatre. Obilne porcije, miris dima i okus koji se pamti — u srcu Zadra.</p>
+    <div class="hero-cta reveal">
+      <a href="#visit" class="btn-res">Rezerviraj stol</a>
+      <a href="#menu" class="ghost">Pogledaj jelovnik</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Skrolaj</div>
+</section>
+
+<section class="manifest" id="manifest">
+  <div class="wrap">
+    <div class="small reveal">Naša filozofija</div>
+    <h2 class="word-h2" data-split>Vatra je naš majstor. Žar naš sat. Dim naš začin.</h2>
+    <p class="reveal">Sve počinje ujutro, kad zapalimo ugljen i pustimo ga da se smiri u tihi, narančasti žar. Bez prečaca i bez žurbe — meso i riba dolaze do okusa onako kako to samo živa vatra zna. Ono što stigne na vaš stol nosi miris dima, koru zapečenu na žaru i porciju koja se ne štedi. To je Gričko Grill.</p>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker reveal">S vatre i žara</div>
+        <h2 class="sec-title reveal">Jelovnik</h2>
+      </div>
+      <p class="sec-sub reveal">Roštilj kako treba: meso s ražnja, riba s gradela i sve ono što dim i žar učine boljim. Porcije su obilne, namjerno.</p>
+    </div>
+
+    <div class="menu-cat reveal">
+      <h3>Meso s ražnja i žara</h3>
+      <div class="menu-grid">
+        <div class="dish"><div class="dn">Miješano meso s ražnja</div><div class="dd">Vratina, kobasica, ražnjić i pileći batak, polako pečeni iznad žive vatre.</div></div>
+        <div class="dish"><div class="dn">Ražnjići</div><div class="dd">Sočni komadi svinjetine i piletine na ražnju, začinjeni domaćim začinima.</div></div>
+        <div class="dish"><div class="dn">Vratina s gradela</div><div class="dd">Debeo komad vratine, zapečen na žaru do hrskave kore, mekan iznutra.</div></div>
+        <div class="dish"><div class="dn">Janjeća rebarca</div><div class="dd">Marinirana rebarca s ružmarinom, pečena nad ugljenom do zlatne boje.</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <h3>Ćevapi i klasici roštilja</h3>
+      <div class="menu-grid">
+        <div class="dish"><div class="dn">Ćevapi u lepinji</div><div class="dd">Deset komada domaćih ćevapa, svježi luk, ajvar i topla lepinja s žara.</div></div>
+        <div class="dish"><div class="dn">Pljeskavica s vatre</div><div class="dd">Velika, sočna pljeskavica pečena na žaru, sa svježim prilozima.</div></div>
+        <div class="dish"><div class="dn">Kobasica s roštilja</div><div class="dd">Domaća kobasica zapečena nad žarom, uz senf i pečeni krumpir.</div></div>
+        <div class="dish"><div class="dn">Miješani roštilj za dvoje</div><div class="dd">Ćevapi, pljeskavica, ražnjić i kobasica — pladanj za podijeliti.</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <h3>Riba s gradela</h3>
+      <div class="menu-grid">
+        <div class="dish"><div class="dn">Orada s gradela</div><div class="dd">Svježa jadranska orada pečena na žaru, maslinovo ulje, češnjak i peršin.</div></div>
+        <div class="dish"><div class="dn">Lignje na žaru</div><div class="dd">Cijele lignje s gradela, blitva i krumpir, prelivene domaćim uljem.</div></div>
+        <div class="dish"><div class="dn">Brancin s ražnja</div><div class="dd">Brancin pečen iznad žara dok koža ne postane hrskava, s limunom.</div></div>
+        <div class="dish"><div class="dn">Miješana riblja plata</div><div class="dd">Izbor svježe ribe i plodova mora s gradela, za stol koji voli more.</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <h3>Ispod peke</h3>
+      <div class="menu-grid">
+        <div class="dish"><div class="dn">Teletina ispod peke</div><div class="dd">Teletina i krumpir pečeni pod pekom uz žar — naručuje se unaprijed.</div></div>
+        <div class="dish"><div class="dn">Janjetina ispod peke</div><div class="dd">Janjetina polako pečena pod sačem, mekana da se topi, s pečenim krumpirom.</div></div>
+        <div class="dish"><div class="dn">Hobotnica ispod peke</div><div class="dd">Hobotnica s krumpirom i začinima, dimljena ispod peke do savršenstva.</div></div>
+        <div class="dish"><div class="dn">Domaći prilozi</div><div class="dd">Blitva s krumpirom, ajvar, svježa salata i lepinja s žara.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="story-img reveal"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Roštilj nad žarom i dimom" /></div>
+    <div class="story-text">
+      <h2 class="reveal">Naša priča</h2>
+      <p class="reveal">Gričko Grill izrastao je iz jednostavne ideje: da roštilj bude onakav kakav pamtimo iz dvorišta i s ognjišta — pošten, obilan i pečen na pravoj vatri. <strong>Bez plina, bez prečaca</strong> — samo ugljen, žar i strpljenje.</p>
+      <p class="reveal">U Zadru smo postali mjesto kamo se dolazi gladan, a odlazi sit i zadovoljan. Gosti nam vjeruju — <strong>4.5 ocjene iz preko 540 recenzija</strong> govore da dim i žar rade svoj posao svaki dan iznova.</p>
+      <p class="reveal">Kupujemo svježe, pečemo po narudžbi i nikad ne štedimo na porciji. Jer roštilj nije samo jelo — to je druženje za stolom, dok vatra još pucketa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker reveal">Vatra, dim i žar</div>
+        <h2 class="sec-title reveal">Galerija</h2>
+      </div>
+      <p class="sec-sub reveal">Žar koji diše, meso koje cvrči i dim koji se diže — atmosfera Gričko Grilla.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1200&q=80" alt="Meso na žaru" loading="lazy" /></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=900&q=80" alt="Živi ugljen i žar" loading="lazy" /></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=900&q=80" alt="Plamen i vatra roštilja" loading="lazy" /></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80" alt="Ćevapi i meso s roštilja" loading="lazy" /></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80" alt="Pečeno meso na drvenoj dasci" loading="lazy" /></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80" alt="Rustikalni stol s jelima" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-info">
+      <h2 class="reveal">Posjetite nas</h2>
+      <div class="info-block reveal">
+        <div class="lbl">Lokacija</div>
+        <div class="val">Zadar, Hrvatska</div>
+      </div>
+      <div class="info-block reveal">
+        <div class="lbl">Rezervacije i narudžbe</div>
+        <div class="val"><a href="tel:+38523305087">+385 23 305 087</a></div>
+      </div>
+      <div class="info-block reveal">
+        <div class="lbl">Radno vrijeme</div>
+        <div class="hours-row"><span>Ponedjeljak – Petak</span><span>11:00 – 23:00</span></div>
+        <div class="hours-row"><span>Subota</span><span>11:00 – 24:00</span></div>
+        <div class="hours-row"><span>Nedjelja</span><span>12:00 – 23:00</span></div>
+      </div>
+      <a href="tel:+38523305087" class="btn-res reveal">Rezerviraj stol</a>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://maps.google.com/maps?q=Gricko+Grill+Zadar&output=embed" loading="lazy" title="Gričko Grill Zadar na karti"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-logo">GRIČKO<span>·</span>GRILL</div>
+        <p>Roštilj na živoj vatri u Zadru. Žar, dim i obilna porcija — svaki dan iznova.</p>
+      </div>
+      <div class="foot-col">
+        <div class="lbl">Kontakt</div>
+        <a href="tel:+38523305087">+385 23 305 087</a>
+        <a href="#visit">Zadar, Hrvatska</a>
+      </div>
+      <div class="foot-col">
+        <div class="lbl">Navigacija</div>
+        <a href="#menu">Jelovnik</a>
+        <a href="#story">Priča</a>
+        <a href="#gallery">Galerija</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Gričko Grill · Zadar</span>
+      <span>Ocjena 4.5 ★ · 541 recenzija</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a href="tel:+38523305087">Rezerviraj stol · +385 23 305 087</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Header scroll state */
+const header = document.getElementById('header');
+addEventListener('scroll',()=>{header.classList.toggle('scrolled',scrollY>40)});
+
+/* Mobile nav */
+const nav=document.getElementById('nav'),tog=document.getElementById('navToggle');
+tog.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+/* Split words for manifest h2 */
+document.querySelectorAll('[data-split]').forEach(el=>{
+  const words=el.textContent.trim().split(' ');
+  el.innerHTML=words.map(w=>`<span class="w"><i>${w}</i></span>`).join(' ');
+});
+
+if(!reduce){
+  const lenis=new Lenis({duration:1.2,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t))});
+  gsap.ticker.add(t=>lenis.raf(t*1000));
+  gsap.ticker.lagSmoothing(0);
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Hero load-in */
+  gsap.timeline({delay:.2})
+    .to('.hero .reveal',{opacity:1,y:0,duration:.9,stagger:.12,ease:'power3.out'})
+    .fromTo('.hero-bg img',{scale:1.12},{scale:1.04,duration:2.4,ease:'power2.out'},0);
+
+  /* Hero parallax */
+  gsap.to('.hero-bg img',{yPercent:14,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
+
+  /* Generic reveals */
+  gsap.utils.toArray('.reveal').forEach(el=>{
+    if(el.closest('.hero'))return;
+    gsap.to(el,{opacity:1,y:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  /* Word reveal h2 */
+  gsap.utils.toArray('[data-split]').forEach(el=>{
+    gsap.from(el.querySelectorAll('.w i'),{yPercent:110,duration:.7,stagger:.05,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 82%'}});
+  });
+}
+</script>
+</body>
+</html>
